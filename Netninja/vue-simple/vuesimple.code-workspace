@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/home/davidchuka/Documents/Desktop/tambo/tambo-frontend-app"
+		},
+		{
+			"path": "/home/davidchuka/Documents/Learning/VuePlayground"
+		},
+		{
+			"path": "/home/davidchuka/Documents/CHOWIE"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VuePlayground"
+	}
+}
