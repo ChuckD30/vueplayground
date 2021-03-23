@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My Store</title>
+	<link rel="stylesheet" href="./assets/css/mystyle.css">
+	<script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<div id="product-info">
+		<h1>{{ product }}</h1>
+		<h3>{{ description }}</h3>
+	</div>
+
+	<div id="image">
+		<img v-bind:src="image" :alt="alt" id="image">
+		<button type="button" id="button" v-on:click="addToCart">Add To Cart</button>
+		<button type="button" id="button" v-on:click="removeFromCart">Remove from Cart</button>
+		<p>{{ add }} {{ add === 1 ? products = "product" : products = "products" }} added to cart</p>
+
+
+	<div class="boxes"
+				@click= "changeBackground = !changeBackground"
+				:class="changeClasses"></div>
+	<div class="boxes" ></div>
+	<div class="boxes"></div>
+	<p class="text" :style="textStyle">Sample Text</p>
+
+	<hr>
+	<input placeholder="change sample text font" type="text" v-model="font">
+	<input placeholder="change sample text size" type="text" v-model="size">
+	<input placeholder="change sample text color" type="text" v-model="color">
+	
+	<button @click="show" ref="clickedButton">This Button does nothing</button>
+
+</div>
+<script>
+	new Vue({
+	el: '#app',
+  data: {
+  	product: 'Hoodies',
+		description: "Our popular SHOTS TO THE DEVIL hoodie",
+		image: "./assets/images/harry.jpg",
+		alt: "image here",
+		products: "products",
+		add: 0,
+		changeBackground: false,
+		font: 'sans-serif',
+		size: 20,
+		color: 'black',
+		align: 'bold'
+  },
+	computed: {
+		textStyle: function() {
+			return {
+				fontFamily: this.font,
+				fontSize: this.size + 'px',
+				color: this.color,
+			};
+		},
+		changeClasses: function() {
+			return {
+				green: this.changeBackground,
+				white: !this.changeBackground,
+			}
+		}
+	},
+	methods: {
+		addToCart: function() {
+			this.add++;
+		},
+		removeFromCart: function() {
+			this.add--;
+		},
+		show: function(){
+			console.log(this.$refs);
+		}
+	}
+
+});
+</script>
+</body>
+</html>

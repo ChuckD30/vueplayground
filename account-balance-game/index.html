@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue App</title>
+    <script src="../vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <!--image -->
+        <div id="boy" :class="{sad:sad}">
+            <h3>My Account Balance</h3>
+        </div>
+
+        <!-- Health bar -->
+        <div id="bar">
+            <div :style="{width: health + '%'}" :class="{unsafe:unsafe}"></div>
+        </div>
+
+        <!--controls -->
+        <div class="controls">
+            <div class="debit">
+                <button id="debit" @click="debit">DEBIT</button>
+            </div>
+
+            <div class="credit">
+                <button id="credit" @click="credit">CREDIT</button>
+            </div>
+        </div>
+
+        <!-- display messageFull/Empty and stop disable click function -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

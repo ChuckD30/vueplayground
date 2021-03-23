@@ -1,0 +1,61 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#boy {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(images/happy.jpg) center no-repeat;
+    background-size: 80%;
+    text-align: center;
+}
+
+#boy.sad {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(images/sad.jpg) center no-repeat;
+    background-size: 80%;
+    text-align: center;
+}
+
+#bar {
+    width: 400px;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
+}
+
+#bar div {
+    height: 20px;
+    background: rgb(68, 202, 68);
+}
+
+#bar div.unsafe {
+    background-color: crimson;
+}
+
+#credit {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+#debit {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-shadow: 2px 2px;
+    cursor: pointer;
+}
